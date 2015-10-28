@@ -28,10 +28,11 @@ class ExercisesController < ApplicationController
       redirect_to users_path
     else
       render :edit
+    end
   end
 
-  def destroy
-  end
+  # def destroy
+  # end
 
 
 end

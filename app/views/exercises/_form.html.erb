@@ -1,0 +1,7 @@
+<%= form_for [@user, @exercise] do |f| %>
+  <%= f.label :exercise_name %>
+  <%= f.text_field :exercise_name %>
+  <%= f.label :calories_burned %>
+  <%= f.text_field :calories_burned %>
+  <%= f.submit %>
+<% end %>

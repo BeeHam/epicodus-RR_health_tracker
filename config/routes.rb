@@ -3,11 +3,11 @@ Rails.application.routes.draw do
 
   root "static#index"
 
-  resource :users, only: [:show] do
-    resource :foods
+  resources :users, only: [:show] do
+    resources :foods
   end
 
-  resource :users, only: [:show] do
-    resource :exercises
+  resources :users, only: [:show] do
+    resources :exercises
   end
 end
