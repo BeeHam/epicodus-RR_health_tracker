@@ -3,8 +3,8 @@
 <table class="table table-striped table-hover">
   <thead>
     <tr>
-      <th><%= link_to "Exercise", exer_sort: "exercise_name" %></th>
-      <th><%= link_to "Calories Burned", exer_sort: "calories_burned" %></th>
+      <th><%= exer_sortable "exercise_name" %></th>
+      <th><%= exer_sortable "calories_burned" %></th>
       <th></th>
     </tr>
   </thead>
@@ -24,8 +24,8 @@
 <table class="table table-striped table-hover">
   <thead>
     <tr>
-      <th><%= link_to "Food", food_sort: "food_name" %></th>
-      <th><%= link_to "Calories", food_sort: "calories" %></th>
+      <th><%= food_sortable "food_name" %></th>
+      <th><%= food_sortable "calories" %></th>
       <th></th>
     </tr>
   </thead>
