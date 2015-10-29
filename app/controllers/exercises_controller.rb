@@ -31,8 +31,12 @@ class ExercisesController < ApplicationController
     end
   end
 
-  # def destroy
-  # end
+  def destroy
+    @user = current_user
+    @exercise = @user.exercises.find(params[:id])
+    @exercise.destroy
+    redirect_to user_path(@user)
+  end
 
   private
   def exercise_params
