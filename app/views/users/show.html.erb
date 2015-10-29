@@ -1,3 +1,21 @@
 <h1>Howdy <%= current_user.username %></h1>
 
+<table>
+  <thead>
+    <tr>
+      <th>Exercise</th>
+      <th>Calories Burned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @exercises.each do |exercise| %>
+    <tr>
+      <td><%= exercise.exercise_name %></td>
+      <td><%= exercise.calories_burned %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
 <%= link_to "Add and Exercise", new_user_exercise_path(current_user) %>

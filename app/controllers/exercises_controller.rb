@@ -9,7 +9,7 @@ class ExercisesController < ApplicationController
     @user = current_user
     @exercise = @user.exercises.new(exercise_params)
     if @exercise.save
-      redirect_to users_path
+      redirect_to user_path(@user)
     else
       render :new
     end
@@ -25,7 +25,7 @@ class ExercisesController < ApplicationController
     @user = current_user
     @exercise = @user.exercises.find(params[:id])
     if @exercise.update(exercise_params)
-      redirect_to users_path
+      redirect_to user_path(@user)
     else
       render :edit
     end
@@ -34,5 +34,8 @@ class ExercisesController < ApplicationController
   # def destroy
   # end
 
-
+  private
+  def exercise_params
+    params.require(:exercise).permit(:exercise_name, :calories_burned)
+  end
 end
