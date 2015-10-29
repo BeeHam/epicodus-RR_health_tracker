@@ -2,8 +2,8 @@ class UsersController < ApplicationController
 
   def show
     @user = current_user
-    @foods = @user.foods.all
-    @exercises = @user.exercises.all
+    @foods = @user.foods.order(params[:food_sort])
+    @exercises = @user.exercises.order(params[:exer_sort])
   end
 
 
