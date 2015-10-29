@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(function() {
+  $("#tables thead th a").live('click', function() {
+    $.getScript(this.href);
+    return false;
+  });
+});

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-
   def show
+
     @user = current_user
 
     if params[:food_sort]
@@ -16,7 +16,4 @@ class UsersController < ApplicationController
     end
 
   end
-
-
-
 end
